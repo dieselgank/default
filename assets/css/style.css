@@ -1,0 +1,127 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+.element::-webkit-scrollbar {
+  width: 0 !important;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: auto; /* Mengaktifkan scroll horizontal */
+  overflow-y: auto; /* Menonaktifkan scroll vertikal */
+  height: 100vh;
+  scrollbar-width: none;
+}
+
+.container {
+  display: flex; /* Total lebar untuk 4 halaman, 100vw untuk setiap halaman */
+}
+
+.section {
+  flex: 1 0 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: white;
+}
+
+/* Warna berbeda untuk setiap halaman */
+.section1 {
+  background-color: red;
+}
+
+.section2 {
+  background-color: blue;
+}
+
+.section3 {
+  animation: backgroundBerkedip 2s infinite;
+}
+
+@keyframes backgroundBerkedip {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: blue;
+  }
+  50% {
+    background-color: green;
+  }
+  75% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+.section4 {
+  background-color: rgb(0, 0, 0);
+}
+
+/* Animasi berkedip */
+@keyframes berkedip {
+  0% {
+    color: red;
+  }
+  25% {
+    color: blue;
+  }
+  50% {
+    color: green;
+  }
+  75% {
+    color: yellow;
+  }
+  100% {
+    color: red;
+  }
+}
+
+.berkedip {
+  animation: berkedip 1s infinite;
+}
+
+/* Efek teks gelombang */
+.wave-text {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+.wave-text span {
+  display: inline-block;
+  animation: wave 1s infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+a {
+  text-decoration: none;
+}
+.kotak-kecil {
+  width: auto; /* Lebar kotak */
+  height: auto; /* Tinggi kotak */
+  border: 1px solid black; /* Garis tepi kotak */
+  background-color: lightgray; /* Warna latar belakang */
+  display: flex;
+  font-size: 14px; /* Ukuran teks */
+  margin-left: 10px;
+  padding-left: 10px;
+}

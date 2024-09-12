@@ -89,10 +89,16 @@ function detectBrowser() {
   if (userAgent.indexOf("Firefox") > -1) {
     browserName = "Mozilla Firefox";
     browserVersion = userAgent.match(/Firefox\/(\d+\.\d+)/)[1];
-  } else if (userAgent.indexOf("Chrome") > -1) {
+  } else if (
+    userAgent.indexOf("Chrome") > -1 &&
+    userAgent.indexOf("Edg") === -1
+  ) {
     browserName = "Google Chrome";
     browserVersion = userAgent.match(/Chrome\/(\d+\.\d+)/)[1];
-  } else if (userAgent.indexOf("Safari") > -1) {
+  } else if (
+    userAgent.indexOf("Safari") > -1 &&
+    userAgent.indexOf("Chrome") === -1
+  ) {
     browserName = "Apple Safari";
     browserVersion = userAgent.match(/Version\/(\d+\.\d+)/)[1];
   } else if (userAgent.indexOf("Opera") > -1 || userAgent.indexOf("OPR") > -1) {
@@ -103,6 +109,12 @@ function detectBrowser() {
   } else if (userAgent.indexOf("MSIE") > -1 || !!document.documentMode) {
     browserName = "Internet Explorer";
     browserVersion = userAgent.match(/MSIE (\d+\.\d+)/)[1];
+  } else if (userAgent.indexOf("Edg") > -1) {
+    browserName = "Microsoft Edge";
+    browserVersion = userAgent.match(/Edg\/(\d+\.\d+)/)[1];
+  } else if (userAgent.indexOf("Edge") > -1) {
+    browserName = "Microsoft Edge Legacy";
+    browserVersion = userAgent.match(/Edge\/(\d+\.\d+)/)[1];
   } else {
     browserName = "Unknown";
     browserVersion = "Unknown";

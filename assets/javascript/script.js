@@ -1,25 +1,12 @@
 // Menggunakan API ip-api.com untuk mendapatkan alamat IP dan lokasi
-fetch("http://ip-api.com/json/")
+// Menggunakan API ipify untuk mendapatkan alamat IP pengguna
+fetch("https://api.ipify.org?format=json")
   .then((response) => response.json())
   .then((data) => {
-    // Menampilkan alamat IP
-    document.getElementById("ip").textContent = data.query;
-
-    // Menampilkan informasi lokasi (kota, wilayah, negara)
-    document.getElementById("lokasi").textContent = data.city;
-    document.getElementById("region").textContent = data.regionName;
-    document.getElementById("country").textContent = data.country;
-
-    // Menampilkan latitude dan longitude
-    document.getElementById("latlng").textContent = `${data.lat}, ${data.lon}`;
+    document.getElementById("ip").textContent = data.ip;
   })
   .catch((error) => {
-    document.getElementById("ip").textContent = "Gagal mendapatkan IP";
-    document.getElementById("lokasi").textContent = "Gagal mendapatkan lokasi";
-    document.getElementById("region").textContent = "Gagal mendapatkan wilayah";
-    document.getElementById("country").textContent = "Gagal mendapatkan negara";
-    document.getElementById("latlng").textContent =
-      "Gagal mendapatkan koordinat";
+    console.error("Gagal mendapatkan IP:", error);
   });
 
 const isMobile = /Mobi|Android/i.test(navigator.userAgent);

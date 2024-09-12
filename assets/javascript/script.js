@@ -47,3 +47,18 @@ var screenHeight = window.screen.height;
 // Menampilkan resolusi layar di halaman
 document.getElementById("resolution").textContent =
   screenWidth + " x " + screenHeight + " piksel";
+
+// Mengecek apakah Network Information API didukung oleh browser
+if ("connection" in navigator) {
+  var connection =
+    navigator.connection ||
+    navigator.mozConnection ||
+    navigator.webkitConnection;
+  var type = connection.effectiveType;
+
+  // Menampilkan jenis koneksi
+  document.getElementById("connection").textContent = type;
+} else {
+  document.getElementById("connection").textContent =
+    "Network Information API tidak didukung oleh browser ini.";
+}

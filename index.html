@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>You are not safe</title>
+    <style>
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      .element::-webkit-scrollbar {
+        width: 0 !important;
+      }
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        overflow-x: auto; /* Mengaktifkan scroll horizontal */
+        overflow-y: auto; /* Menonaktifkan scroll vertikal */
+        height: 100vh;
+        scrollbar-width: none;
+      }
+
+      .container {
+        display: flex; /* Total lebar untuk 4 halaman, 100vw untuk setiap halaman */
+      }
+
+      .section {
+        flex: 1 0 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        color: white;
+      }
+
+      /* Warna berbeda untuk setiap halaman */
+      .section1 {
+        background-color: red;
+      }
+
+      .section2 {
+        background-color: blue;
+      }
+
+      .section3 {
+        animation: backgroundBerkedip 2s infinite;
+      }
+
+      @keyframes backgroundBerkedip {
+        0% {
+          background-color: red;
+        }
+        25% {
+          background-color: blue;
+        }
+        50% {
+          background-color: green;
+        }
+        75% {
+          background-color: yellow;
+        }
+        100% {
+          background-color: red;
+        }
+      }
+
+      .section4 {
+        background-color: rgb(0, 0, 0);
+      }
+
+      /* Animasi berkedip */
+      @keyframes berkedip {
+        0% {
+          color: red;
+        }
+        25% {
+          color: blue;
+        }
+        50% {
+          color: green;
+        }
+        75% {
+          color: yellow;
+        }
+        100% {
+          color: red;
+        }
+      }
+
+      .berkedip {
+        animation: berkedip 1s infinite;
+      }
+
+      /* Efek teks gelombang */
+      .wave-text {
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: bold;
+        letter-spacing: 5px;
+      }
+
+      .wave-text span {
+        display: inline-block;
+        animation: wave 1s infinite;
+        animation-delay: calc(0.1s * var(--i));
+      }
+
+      @keyframes wave {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      a {
+        text-decoration: none;
+      }
+      .kotak-kecil {
+        width: auto; /* Lebar kotak */
+        height: auto; /* Tinggi kotak */
+        border: 1px solid black; /* Garis tepi kotak */
+        background-color: lightgray; /* Warna latar belakang */
+        display: flex;
+        font-size: 14px; /* Ukuran teks */
+        margin-left: 10px;
+        padding-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <marquee direction="right"
+      ><iframe
+        src="https://giphy.com/embed/3ov9k0Ziq50EoOuWRi"
+        width="480"
+        height="480"
+        style=""
+        frameborder="0"
+        class="giphy-embed"
+        allowfullscreen
+      ></iframe
+    ></marquee>
+    <div class="container">
+      <div class="section section3">
+        <h1 class="berkedip wave-text">
+          <span style="--i: 1"> </span>
+          <span style="--i: 2">B</span>
+          <span style="--i: 3">A</span>
+          <span style="--i: 4">G</span>
+          <span style="--i: 5">A</span>
+          <span style="--i: 6">S</span>
+          <span style="--i: 7"> </span>
+          <span style="--i: 8">d</span>
+          <span style="--i: 9">a</span>
+          <span style="--i: 10">n</span>
+          <span style="--i: 11"> </span>
+          <span style="--i: 12">B</span>
+          <span style="--i: 13">A</span>
+          <span style="--i: 14">N</span>
+          <span style="--i: 15">G</span>
+          <span style="--i: 16"> </span>
+          <span style="--i: 17">A</span>
+          <span style="--i: 18">D</span>
+          <span style="--i: 19">I</span>
+        </h1>
+      </div>
+      <!-- Halaman 1 -->
+
+      <!-- Halaman 4 -->
+      <div class="">
+        <h1 style="text-align: center">Selamat Anda Menemukan Saya</h1>
+        <p style="text-align: center">Link Download Ada di Angkot</p>
+        <marquee behavior="alternate" style="font-size: 1.5rem"
+          >｡°🚂🚃🚃🚃ini KRL🚃🚃🚃🚃🛼</marquee
+        >
+        <marquee scrollamount="10" style="font-size: 2rem">🏍🏍️ 🚓</marquee>
+        <marquee direction="right">Ceritanya ini lagi balapan</marquee>
+        <marquee direction="right" scrollamount="10" style="font-size: 2rem"
+          >⛵</marquee
+        >
+        <marquee direction="right" scrollamount="20" style="font-size: 3em"
+          >✈</marquee
+        >
+        <marquee
+          width="500"
+          scrollamount="12"
+          direction="left"
+          truespeed
+          onmouseover="this.stop()"
+          onmouseout="this.start()"
+          style="font-size: 2rem"
+          style="text-align: left; color: #000000; font-weight: normal"
+          ><a
+            href="https://deb.parrot.sh/parrot/iso/6.1/Parrot-security-6.1_amd64.iso"
+            >🚗💨</a
+          ></marquee
+        >
+        <div class="kotak-kecil">
+          <ul>
+            <li>
+              <p>
+                <strong>Alamat IP Publik Anda:</strong>
+                <span style="color: red" id="ip">Memuat...</span>
+              </p>
+              <p>
+                <strong>Lokasi:</strong>
+                <span style="color: red" id="lokasi">Memuat...</span>
+              </p>
+              <p>
+                <strong>Wilayah:</strong>
+                <span style="color: red" id="region">Memuat...</span>
+              </p>
+              <p>
+                <strong>Negara:</strong>
+                <span style="color: red" id="country">Memuat...</span>
+              </p>
+              <p>
+                <strong>Latitude dan Longitude:</strong>
+                <span style="color: red" id="latlng">Memuat...</span>
+              </p>
+
+              <script>
+                // Menggunakan API ip-api.com untuk mendapatkan alamat IP dan lokasi
+                fetch("http://ip-api.com/json/")
+                  .then((response) => response.json())
+                  .then((data) => {
+                    // Menampilkan alamat IP
+                    document.getElementById("ip").textContent = data.query;
+
+                    // Menampilkan informasi lokasi (kota, wilayah, negara)
+                    document.getElementById("lokasi").textContent = data.city;
+                    document.getElementById("region").textContent =
+                      data.regionName;
+                    document.getElementById("country").textContent =
+                      data.country;
+
+                    // Menampilkan latitude dan longitude
+                    document.getElementById(
+                      "latlng"
+                    ).textContent = `${data.lat}, ${data.lon}`;
+                  })
+                  .catch((error) => {
+                    document.getElementById("ip").textContent =
+                      "Gagal mendapatkan IP";
+                    document.getElementById("lokasi").textContent =
+                      "Gagal mendapatkan lokasi";
+                    document.getElementById("region").textContent =
+                      "Gagal mendapatkan wilayah";
+                    document.getElementById("country").textContent =
+                      "Gagal mendapatkan negara";
+                    document.getElementById("latlng").textContent =
+                      "Gagal mendapatkan koordinat";
+                  });
+              </script>
+            </li>
+            <li>
+              <p>
+                Tipe Perangkat : <span style="color: red" id="device"></span>
+              </p>
+
+              <script>
+                const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+                document.getElementById("device").textContent = isMobile
+                  ? "Mobile"
+                  : "Desktop";
+              </script>
+            </li>
+            <li>
+              <p>Sistem Operasi: <span style="color: red" id="os"></span></p>
+
+              <script>
+                function detectOS() {
+                  let userAgent = window.navigator.userAgent;
+                  let platform = window.navigator.platform;
+                  let os = "Tidak Diketahui";
+
+                  // Pendeteksian sistem operasi
+                  if (platform.indexOf("Win") !== -1) {
+                    os = "Windows";
+                  } else if (platform.indexOf("Mac") !== -1) {
+                    os = "MacOS";
+                  } else if (
+                    platform.indexOf("Linux") !== -1 ||
+                    platform.indexOf("X11") !== -1
+                  ) {
+                    os = "Linux";
+                  } else if (/Android/.test(userAgent)) {
+                    os = "Android";
+                  } else if (/iPhone|iPad|iPod/.test(userAgent)) {
+                    os = "iOS";
+                  }
+
+                  return os;
+                }
+
+                // Tampilkan sistem operasi ke dalam elemen HTML
+                document.getElementById("os").textContent = detectOS();
+              </script>
+            </li>
+            <li>
+              <p>
+                Resolusi Browser :
+                <span style="color: red" id="resolution"></span>
+              </p>
+
+              <script>
+                const screenWidth = screen.width;
+                const screenHeight = screen.height;
+                document.getElementById(
+                  "resolution"
+                ).textContent = `${screenWidth} x ${screenHeight}`;
+              </script>
+            </li>
+            <li>
+              <p>
+                Koneksi :
+                <span
+                  style="color: red; text-transform: uppercase"
+                  id="network"
+                ></span>
+              </p>
+
+              <script>
+                if (navigator.connection) {
+                  const connectionType = navigator.connection.effectiveType;
+                  document.getElementById(
+                    "network"
+                  ).textContent = `${connectionType}`;
+                } else {
+                  document.getElementById("network").textContent =
+                    "Informasi jaringan tidak tersedia.";
+                }
+              </script>
+            </li>
+            <li>
+              <p>
+                Bahasa Browser :
+                <span style="color: red" id="language"></span>
+              </p>
+
+              <script>
+                const language = navigator.language;
+                document.getElementById("language").textContent = `${language}`;
+              </script>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <audio src="assets/musik/feel_good.mp3" controls autoplay></audio>
+  </body>
+</html>

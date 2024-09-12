@@ -75,3 +75,7 @@ fetch("https://ipapi.co/json/")
     document.getElementById("wilayah").textContent = "Gagal memuat wilayah.";
     console.error("Error:", error);
   });
+
+// Mendapatkan bahasa browser pengguna
+const browserLanguage = navigator.language || navigator.userLanguage;
+document.getElementById("browser-language").textContent = browserLanguage;

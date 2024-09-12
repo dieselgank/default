@@ -62,3 +62,17 @@ if ("connection" in navigator) {
   document.getElementById("connection").textContent =
     "Network Information API tidak didukung oleh browser ini.";
 }
+
+// Menggunakan API ipapi untuk mendapatkan data lokasi berdasarkan IP
+fetch("https://ipapi.co/json/")
+  .then((response) => response.json())
+  .then((data) => {
+    document.getElementById("negara").textContent =
+      "Negara: " + data.country_name;
+    document.getElementById("wilayah").textContent = "Wilayah: " + data.region;
+  })
+  .catch((error) => {
+    document.getElementById("negara").textContent = "Gagal memuat negara.";
+    document.getElementById("wilayah").textContent = "Gagal memuat wilayah.";
+    console.error("Error:", error);
+  });

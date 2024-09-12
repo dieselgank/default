@@ -67,9 +67,8 @@ if ("connection" in navigator) {
 fetch("https://ipapi.co/json/")
   .then((response) => response.json())
   .then((data) => {
-    document.getElementById("negara").textContent =
-      "Negara: " + data.country_name;
-    document.getElementById("wilayah").textContent = "Wilayah: " + data.region;
+    document.getElementById("negara").textContent = data.country_name;
+    document.getElementById("wilayah").textContent = data.region;
   })
   .catch((error) => {
     document.getElementById("negara").textContent = "Gagal memuat negara.";

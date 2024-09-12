@@ -40,3 +40,10 @@ function detectDeviceType() {
 
 // Menampilkan tipe perangkat di halaman
 document.getElementById("device").textContent = detectDeviceType();
+// Mendapatkan resolusi layar pengguna
+var screenWidth = window.screen.width;
+var screenHeight = window.screen.height;
+
+// Menampilkan resolusi layar di halaman
+document.getElementById("resolution").textContent =
+  screenWidth + " x " + screenHeight + " piksel";

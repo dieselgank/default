@@ -26,4 +26,17 @@ function detectDevice() {
 }
 
 // Menampilkan tipe perangkat di halaman
-document.getElementById("device").textContent = detectDevice();
+document.getElementById("os").textContent = detectDevice();
+
+function detectDeviceType() {
+  var userAgent = navigator.userAgent;
+
+  if (/Mobi|Android/i.test(userAgent)) {
+    return "Mobile";
+  } else {
+    return "Desktop";
+  }
+}
+
+// Menampilkan tipe perangkat di halaman
+document.getElementById("device").textContent = detectDeviceType();

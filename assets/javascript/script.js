@@ -7,3 +7,23 @@ fetch("https://api.ipify.org?format=json")
   .catch((error) => {
     console.error("Gagal mendapatkan IP:", error);
   });
+function detectDevice() {
+  var userAgent = navigator.userAgent;
+
+  if (/android/i.test(userAgent)) {
+    return "Android";
+  } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
+    return "iOS";
+  } else if (/Windows/i.test(userAgent)) {
+    return "Windows";
+  } else if (/Macintosh/i.test(userAgent)) {
+    return "MacOS";
+  } else if (/Linux/i.test(userAgent)) {
+    return "Linux";
+  } else {
+    return "Perangkat tidak diketahui";
+  }
+}
+
+// Menampilkan tipe perangkat di halaman
+document.getElementById("device").textContent = detectDevice();

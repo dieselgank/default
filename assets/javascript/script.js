@@ -125,3 +125,13 @@ function detectBrowser() {
 }
 
 detectBrowser();
+
+fetch("https://ipwhois.app/json/")
+  .then((response) => response.json())
+  .then((data) => {
+    document.getElementById("ispInfo").innerHTML = `${data.isp}`;
+  })
+  .catch((error) => {
+    document.getElementById("ispInfo").innerHTML = "Tidak dapat mendeteksi ISP";
+    console.error("Error:", error);
+  });

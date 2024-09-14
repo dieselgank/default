@@ -31,11 +31,11 @@ html {
 
 /* Warna berbeda untuk setiap halaman */
 .section1 {
-  background-color: red;
+  background: none;
 }
 
 .section2 {
-  background-color: blue;
+  background: none;
 }
 
 .section3 {
@@ -61,7 +61,11 @@ html {
 }
 
 .section4 {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 252, 234);
+  border-style: dashed;
+}
+.section5 {
+  background: none;
 }
 
 /* Animasi berkedip */
@@ -125,4 +129,20 @@ a {
   margin-left: 10px;
   margin-right: 10px;
   padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Aspect Ratio 16:9 */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 80%;
 }
